@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+   <link href='http://fonts.googleapis.com/css?family=Text+Me+One|Roboto' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" type="text/css" href="static/styles.css" media="screen" />
+
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+   <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20079446-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+   </script>
+
+   <title>oogiyot</title>
+</head>
+
+<body>
+<div id="container">
+   <div id="header">
+      <!-- Header start -->
+      <h1><a class="title" href="/">oogiyot</a></h1>
+      <div class="logo-container">
+         <p id="hebrew"></p>
+         <img class="logo" src="static/images/logo.png"/>
+      </div>
+      <div class="menu">
+      <ul>
+      {% for item in menu %}
+         <li><a href={{item.link}}>{{item.name}}</a></li>
+      {% endfor %}
+      </ul>
+      </div>
+      <!-- Header end -->
+   </div>
+   <div id="body">
+      <!-- Body start -->
+      {% block content %}{% endblock %}
+      <!-- Body end -->
+   </div>
+   <div id="footer">
+      <!-- Footer start -->
+      <p>created by Eithan Shavit</p>
+      <!-- Footer end -->
+   </div>
+</div>
+</body>
+
+<script>
+    $(function() {
+       $('.logo-container').hover(
+          function () {
+              document.getElementById("hebrew").innerHTML="oogiyot is \"cookies\" in Hebrew!";
+              $(this).children('.logo').first().fadeOut('fast');
+           },
+          function () {
+              $(this).children('.logo').first().fadeIn('fast');
+           }
+        );
+    });
+</script>
+
+</html>
