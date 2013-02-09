@@ -1,5 +1,6 @@
 ﻿<html>
 <head>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
    <link href='http://fonts.googleapis.com/css?family=Text+Me+One|Roboto' rel='stylesheet' type='text/css'>
    <link rel="stylesheet" type="text/css" href="static/styles.css" media="screen" />
 
@@ -32,7 +33,11 @@
       <div class="menu">
       <ul>
       {% for item in menu %}
-         <li><a href={{item.link}}>{{item.name}}</a></li>
+				  {% if item.name == page %}
+					  <li><a class="chosen-menu" href={{item.link}}>{{item.name}}</a></li>
+				  {% else %}
+					  <li><a href={{item.link}}>{{item.name}}</a></li>
+				  {% endif %} 
       {% endfor %}
       </ul>
       </div>
@@ -42,11 +47,6 @@
       <!-- Body start -->
       {% block content %}{% endblock %}
       <!-- Body end -->
-   </div>
-   <div id="footer">
-      <!-- Footer start -->
-      <p>created by Eithan Shavit</p>
-      <!-- Footer end -->
    </div>
 </div>
 </body>

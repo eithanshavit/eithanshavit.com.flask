@@ -10,6 +10,7 @@ body {
 
 .title {
 	font-size: 52px;
+	color: #784A2E;
 }
 
 #container {
@@ -17,10 +18,6 @@ body {
 	position:relative;
 	max-width: 700px;
 	margin: 0 auto;
-}
-
-.title {
-	color: #784A2E;
 }
 
 #header {
@@ -34,17 +31,6 @@ body {
 	padding:10px;
 }
 
-#footer {
-	color: #7D9296;
-	text-align: center;
-	font-size: 10px;
-	position:absolute;
-	bottom:0;
-	width:100%;
-	height:30px;			/* Height of the footer */
-	border-top: 1px dashed #7D9296;
-}
-
 .email-address a{
 	color: #808080;
 }
@@ -53,15 +39,6 @@ a {
 	text-decoration: none;
 }
 
-h1 {
-	margin: 20px;
-	color: #BE5F2A;
-	font-size: 24px;
-}
-#body p {
-	color: #606663;
-	font-size: 20px;
-}
 
 .logo-container {
    width:400px;
@@ -102,4 +79,38 @@ li a {
 }
 li a:hover {
 	color: #806575;
+}
+
+.section{
+	padding-bottom:40px;
+}
+
+#body p {
+	color: #606663;
+	font-size: 20px;
+}
+
+#body img {
+	height:70px;
+	width:70px;
+}
+
+#body h1 {
+	margin: 20px;
+	color: #618132;
+	font-size: 24px;
+}
+
+#body a {
+	color: rgb(162, 102, 37);
+	font-size: 20px;
+}
+
+a.chosen-menu {
+	color:rgb(77, 41, 41);
+}
+
+#body a:hover {
+	color: #618132;
+	font-size: 20px;
 }
