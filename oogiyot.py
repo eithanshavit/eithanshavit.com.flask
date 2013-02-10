@@ -17,10 +17,40 @@ menu = [
      "link" : "github" },
 ]
 
+verbalClockImages = {
+   "final" : [
+      { "name" : "vc_front.jpg"},
+      { "name" : "vc_frontclose.jpg"},
+      { "name" : "vc_frontclose2.jpg"},
+   ],
+   "hardware" : [
+      { "name" : "vc_layout.png"},
+      { "name" : "vc_schematics.png"},
+      { "name" : "vc_pcb.jpg"},
+      { "name" : "vc_assembled.jpg"},
+      { "name" : "vc_witharduino.jpg"},
+   ],
+   "plastic" : [
+      { "name" : "vc_wordpanel.jpg"},
+      { "name" : "vc_holepanel.jpg"},
+      { "name" : "vc_cutout.jpg"},
+   ],
+   "craft" : [
+      { "name" : "vc_leds.jpg"},
+      { "name" : "vc_finalback.jpg"},
+   ],
+}
+
 
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'static/favicon.ico' )
+
+@app.route('/hardware.html')
+@app.route('/hardware')
+def hardware():
+   return render_template( 'hardware.html', menu=menu, page='hardware',
+   vcImages=verbalClockImages )
 
 @app.route('/<page>')
 def page( page='index' ):
@@ -30,6 +60,7 @@ def page( page='index' ):
 @app.route('/index.html')
 def index():
    return render_template( 'about.html', menu=menu, page='about' )
+
 
 @app.errorhandler(404)
 @app.errorhandler(500)

@@ -39,6 +39,10 @@ a {
 	text-decoration: none;
 }
 
+img {
+    max-width:500px;
+}
+
 
 .logo-container {
    width:400px;
@@ -53,7 +57,7 @@ a {
    left:0;
    top:0;
    display:block;
-   z-index:99;
+   z-index:2;
 }
 
 #hebrew {

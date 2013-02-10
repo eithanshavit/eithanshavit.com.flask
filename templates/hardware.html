@@ -20,35 +20,15 @@ engineering into one final product. I decided to go with an Arduino controller
 as the brain, connected to many LEDs. The front panel is laser cut from Acrylic
 plastic, and Each LED sits behind a word cutout and lights up when the time is
 right. The whole thing goes into a nice wooden frame.</p>
-
-<div class="flexslider">
-  <ul class="slides">
-    <li>
-      <img src="http://placehold.it/100x100" />
-    </li>
-    <li>
-      <img src="http://placehold.it/100x100" />
-    </li>
-    <li>
-      <img src="http://placehold.it/100x100" />
-    </li>
-    <li>
-      <img src="http://placehold.it/100x100" />
-    </li>
-    <li>
-      <img src="http://placehold.it/100x100" />
-    </li>
-    <li>
-      <img src="http://placehold.it/100x100" />
-    </li>
-    <li>
-      <img src="http://placehold.it/100x100" />
-    </li>
-    <li>
-      <img src="http://placehold.it/100x100" />
-    </li>
-  </ul>
-</div>
+<center><table>
+<tr>
+   {% for item in vcImages.final %}
+	<td>
+   <a class="fancybox" rel="final" href="../static/images/vc/{{item.name}}" rel="lightbox[roadtrip]"><img style="width:100px" src="../static/images/vc/{{item.name}}" alt="" /></a>
+   </td>
+   {% endfor %}
+</tr>
+</table></center>
 
 <p>Creating all parts of the project by myself (except for the Arduino),
 required the following steps:</p>
@@ -76,21 +56,49 @@ perfectly under the lax timing constrains of this clock.</p>
 can manually teach it what time it is, but this will be lost on reset. I used
 the <a
 href="https://github.com/oogiyot/VerbalClock/raw/master/Specs/DS1307.pdf">DS1307</a>
-IC to keep track of the time, and to save it on power loss using a battery.</p>
+IC to keep track of the time, even after power is lost. It is connected to a
+backup battery that is activated when needed.</p>
 
 <p>After experimenting and testing the protoype circuit, I used <a
 href="http://www.cadsoftusa.com/">Eagle</a> to design and layout a PCB. <a
 href="http://oshpark.com/">OSH Park</a> is a great community that combines PCB
-designes from its members to effitiantly fabricate small boards onto a large
+designs from its members to efficiently fabricate small boards onto a large
 one, and keep costs down.</p>
+<center><table>
+<tr>
+   {% for item in vcImages.hardware %}
+	<td>
+   <a class="fancybox" rel="hardware" href="../static/images/vc/{{item.name}}" rel="lightbox[roadtrip]"><img style="width:100px" src="../static/images/vc/{{item.name}}" alt="" /></a>
+   </td>
+   {% endfor %}
+</tr>
+</table></center>
 
 <h2>Plastics</h2>
 
 <p>I used vector graphics to create a precise design of the front panel, and
 sent it to <a href="http://ponoko.com/">Ponoko</a> to laser cut it.</p>
+<center><table>
+<tr>
+   {% for item in vcImages.plastic %}
+	<td>
+   <a class="fancybox" rel="plastic" href="../static/images/vc/{{item.name}}" rel="lightbox[roadtrip]"><img style="width:100px" src="../static/images/vc/{{item.name}}" alt="" /></a>
+   </td>
+   {% endfor %}
+</tr>
+</table></center>
 
 <h2>Wood Crafting</h2>
 
 <p>With a lot of help from my friend's father (who is a carpenter), I learned
 how to create a nice wooden frame to hold my Hardware.</p>
+<center><table>
+<tr>
+   {% for item in vcImages.craft %}
+	<td>
+   <a class="fancybox" rel="craft" href="../static/images/vc/{{item.name}}" rel="lightbox[roadtrip]"><img style="width:100px" src="../static/images/vc/{{item.name}}" alt="" /></a>
+   </td>
+   {% endfor %}
+</tr>
+</table></center>
 {% endblock %}
