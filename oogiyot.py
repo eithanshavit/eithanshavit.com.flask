@@ -17,6 +17,11 @@ menu = [
      "link" : "github" },
 ]
 
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'static/favicon.ico' )
+
 @app.route('/<page>')
 def page( page='index' ):
    return render_template( page + '.html', menu=menu, page=page )

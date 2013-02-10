@@ -1,26 +1,23 @@
 ﻿<html>
 <head>
-	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
    <link href='http://fonts.googleapis.com/css?family=Text+Me+One|Roboto' rel='stylesheet' type='text/css'>
    <link rel="stylesheet" type="text/css" href="static/styles.css" media="screen" />
-
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" media="screen" />
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='js/flexslider.css') }}" media="screen" />
    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-
    <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-20079446-1']);
       _gaq.push(['_trackPageview']);
-
       (function() {
          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
    </script>
-
    <title>oogiyot</title>
 </head>
-
 <body>
 <div id="container">
    <div id="header">
@@ -50,7 +47,6 @@
    </div>
 </div>
 </body>
-
 <script>
     $(function() {
        $('.logo-container').hover(
@@ -62,6 +58,25 @@
               $(this).children('.logo').first().fadeIn('fast');
            }
         );
+    });
+</script>
+<script defer src="{{url_for('static', filename='js/jquery.flexslider.js') }}"></script>
+<script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: true,
+        itemWidth: 10,
+        itemMargin: 5,
+        minItems: 2,
+        maxItems: 4,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
     });
 </script>
 

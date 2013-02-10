@@ -90,15 +90,14 @@ li a:hover {
 	font-size: 20px;
 }
 
-#body img {
-	height:70px;
+#body .entry-logo {
 	width:70px;
 }
 
 #body h1 {
 	margin: 20px;
-	color: #618132;
-	font-size: 24px;
+	color: rgb(70, 55, 46);
+	font-size: 27px;
 }
 
 #body a {

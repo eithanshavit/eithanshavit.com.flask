@@ -1,3 +1,96 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 {% block content %}
+<table>
+<tr>
+	<td>
+		  <img class="entry-logo" alt="" src={{ url_for( 'static', filename='images/vc/logo.png') }}/>
+	</td>
+	<td>
+			<h1>Verbal Clock</h1>
+	</td>
+<tr>
+</table>
+<p>One day, as I was visiting <a href="http://mindtribe.com/">MindTribe</a>, I
+noticed a really cool clock hanging on the wall of their lounge area. I thought to
+myself that "this shouldn't be too difficult to make". It turned out to be more
+challenging than I thought, and I learned a lot in the process.</p>
+
+<p>The interesting aspect of this project, was combining different types of
+engineering into one final product. I decided to go with an Arduino controller
+as the brain, connected to many LEDs. The front panel is laser cut from Acrylic
+plastic, and Each LED sits behind a word cutout and lights up when the time is
+right. The whole thing goes into a nice wooden frame.</p>
+
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="http://placehold.it/100x100" />
+    </li>
+    <li>
+      <img src="http://placehold.it/100x100" />
+    </li>
+    <li>
+      <img src="http://placehold.it/100x100" />
+    </li>
+    <li>
+      <img src="http://placehold.it/100x100" />
+    </li>
+    <li>
+      <img src="http://placehold.it/100x100" />
+    </li>
+    <li>
+      <img src="http://placehold.it/100x100" />
+    </li>
+    <li>
+      <img src="http://placehold.it/100x100" />
+    </li>
+    <li>
+      <img src="http://placehold.it/100x100" />
+    </li>
+  </ul>
+</div>
+
+<p>Creating all parts of the project by myself (except for the Arduino),
+required the following steps:</p>
+
+<h2>Software</h2>
+
+<p>This was the easy part. The micro controller runs a loop that polls the real
+time clock (RTC) chip for the current time. It then calculates which words to
+light up, and pushes this data serially to the LEDs.</p>
+
+<p>Another thing to do in the loop, is debounce the on-board button, and react
+to its state. I am currently using the button to activate a LEDs test mode, but
+it also supports adjusting the time.</p>
+
+<h2>Hardware</h2>
+
+<p>The first issue I encouterd using the Arduino, is the lack of IO outputs. My
+design required 24 indepented LEDs and the Arduino Uno only has around 10 GPIOs.
+The solution here is to use shift registers (I used the <a
+href="https://github.com/oogiyot/VerbalClock/raw/master/Specs/TPIC6B595.pdf">TPIC6B595</a>)
+and serially pipe the status of each bit. This uses just 3 GPIOs and works
+perfectly under the lax timing constrains of this clock.</p>
+
+<p>Another issue is that the Arduino's ability to keep real time is limited. We
+can manually teach it what time it is, but this will be lost on reset. I used
+the <a
+href="https://github.com/oogiyot/VerbalClock/raw/master/Specs/DS1307.pdf">DS1307</a>
+IC to keep track of the time, and to save it on power loss using a battery.</p>
+
+<p>After experimenting and testing the protoype circuit, I used <a
+href="http://www.cadsoftusa.com/">Eagle</a> to design and layout a PCB. <a
+href="http://oshpark.com/">OSH Park</a> is a great community that combines PCB
+designes from its members to effitiantly fabricate small boards onto a large
+one, and keep costs down.</p>
+
+<h2>Plastics</h2>
+
+<p>I used vector graphics to create a precise design of the front panel, and
+sent it to <a href="http://ponoko.com/">Ponoko</a> to laser cut it.</p>
+
+<h2>Wood Crafting</h2>
+
+<p>With a lot of help from my friend's father (who is a carpenter), I learned
+how to create a nice wooden frame to hold my Hardware.</p>
 {% endblock %}
