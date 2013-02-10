@@ -1,4 +1,4 @@
-[oogiyot.info](http://oogiyot.info)
+[eithan.info](http://eithan.info)
 =============
 
-My oogiyot website. Built with Python Flash and Jinja2.
+My small website. Built with Python Flash and Jinja2.
