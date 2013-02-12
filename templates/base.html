@@ -16,13 +16,12 @@
          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
    </script>
-   <title>oogiyot</title>
+   <title>Eithan Shavit</title>
 </head>
 <body>
 <div id="container">
    <div id="header">
       <!-- Header start -->
-      <h1><a class="title" href="/">oogiyot</a></h1>
       <div class="logo-container">
          <p id="hebrew"></p>
          <img class="logo" src="static/images/logo.png"/>
@@ -34,7 +33,7 @@
 					  <li><a class="chosen-menu" href={{item.link}}>{{item.name}}</a></li>
 				  {% else %}
 					  <li><a href={{item.link}}>{{item.name}}</a></li>
-				  {% endif %} 
+				  {% endif %}
       {% endfor %}
       </ul>
       </div>
@@ -51,7 +50,7 @@
     $(function() {
        $('.logo-container').hover(
           function () {
-              document.getElementById("hebrew").innerHTML="oogiyot is \"cookies\" in Hebrew!";
+              document.getElementById("hebrew").innerHTML="I don't know why I put a cookie here.";
               $(this).children('.logo').first().fadeOut('fast');
            },
           function () {

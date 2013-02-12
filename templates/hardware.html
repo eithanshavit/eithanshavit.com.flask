@@ -15,7 +15,7 @@ noticed a really cool clock hanging on the wall of their lounge area. I thought 
 myself that "this shouldn't be too difficult to make". It turned out to be more
 challenging than I thought, and I learned a lot in the process.</p>
 
-<p>The interesting aspect of this project, was combining different types of
+<p>The interesting aspect of this project was combining different types of
 engineering into one final product. I decided to go with an Arduino controller
 as the brain, connected to many LEDs. The front panel is laser cut from Acrylic
 plastic, and Each LED sits behind a word cutout and lights up when the time is
@@ -37,9 +37,9 @@ required the following steps:</p>
 
 <p>This was the easy part. The micro controller runs a loop that polls the real
 time clock (RTC) chip for the current time. It then calculates which words to
-light up, and pushes this data serially to the LEDs.</p>
+light up and pushes this data serially to the LEDs.</p>
 
-<p>Another thing to do in the loop, is debounce the on-board button, and react
+<p>Another thing to do in the loop is debounce the on-board button and react
 to its state. I am currently using the button to activate a LEDs test mode, but
 it also supports adjusting the time.</p>
 
