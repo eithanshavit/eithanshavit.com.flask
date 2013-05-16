@@ -1,4 +1,5 @@
 from flask import Flask
+from google.appengine.ext.webapp.util import run_wsgi_app
 from flask import render_template
 from flask import send_from_directory
 import os
@@ -68,5 +69,4 @@ def page_not_found(error):
     return "Oops, are you in the right place?"
 
 if __name__ == '__main__':
-   app.debug = True
-   app.run( host='0.0.0.0', port=80 )
+   run_wsgi_app(app)
