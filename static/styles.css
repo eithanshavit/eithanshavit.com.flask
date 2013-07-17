@@ -1,6 +1,7 @@
 html,
 body {
 	background-color: #99CCFF;
+	background-color: #171D24;
 	font-family: 'Text Me One', sans-serif;
 	font-family: 'Roboto', sans-serif;
 	margin:0;
@@ -23,7 +24,7 @@ body {
 #header {
 	text-align: center;
 	font-size: 30px;
-	color: #784A2E;
+	color: #3d3d3d;
 	padding-bottom:40px;	/* Height of the footer */
 }
 
@@ -46,7 +47,8 @@ img {
 
 .logo-container {
    width:400px;
-   height:300px;
+   height:120px;
+	font-size: 14px;
    position:relative;
    display:block;
    margin:auto;
@@ -101,7 +103,15 @@ li a:hover {
 #body h1 {
 	margin: 20px;
 	color: rgb(70, 55, 46);
+   color:rgb(186, 199, 191);
+   color:rgb(199, 204, 185);
+   color:rgb(36, 156, 65);
 	font-size: 27px;
+}
+
+#body h2 {
+   color:rgb(186, 199, 191);
+   color:rgb(99, 131, 70);
 }
 
 #body a {
