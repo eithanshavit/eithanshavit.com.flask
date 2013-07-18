@@ -14,6 +14,8 @@ menu = [
      "link" : "apps" },
    { "name" : "hardware",
      "link" : "hardware" },
+   { "name" : "photography",
+     "link" : "photography" },
    { "name" : "github",
      "link" : "github" },
 ]

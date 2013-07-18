@@ -2,6 +2,7 @@ html,
 body {
 	background-color: #99CCFF;
 	background-color: #171D24;
+   background-color: #FFFBED;
 	font-family: 'Text Me One', sans-serif;
 	font-family: 'Roboto', sans-serif;
 	margin:0;
@@ -23,7 +24,7 @@ body {
 
 #header {
 	text-align: center;
-	font-size: 30px;
+	font-size: 22px;
 	color: #3d3d3d;
 	padding-bottom:40px;	/* Height of the footer */
 }
@@ -81,10 +82,10 @@ li {
 }
 
 li a {
-	color: #808080;
+	color: #BE0E0E;
 }
 li a:hover {
-	color: #806575;
+	color: #7D068D;
 }
 
 .section{
@@ -93,20 +94,24 @@ li a:hover {
 
 #body p {
 	color: #606663;
+	color: #575757;
 	font-size: 20px;
 }
 
 #body .entry-logo {
-	width:70px;
+	width:50px;
 }
 
 #body h1 {
-	margin: 20px;
+	margin: 17px;
 	color: rgb(70, 55, 46);
    color:rgb(186, 199, 191);
    color:rgb(199, 204, 185);
    color:rgb(36, 156, 65);
-	font-size: 27px;
+   color:rgb(99, 131, 70);
+   color:rgba(107, 37, 93, 1);
+   color:rgba(104, 26, 26, 1);
+	font-size: 24px;
 }
 
 #body h2 {
