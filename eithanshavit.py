@@ -3,6 +3,7 @@ from google.appengine.ext.webapp.util import run_wsgi_app
 from flask import render_template
 from flask import send_from_directory
 import os
+
 app = Flask( __name__ )
 
 menu = [
@@ -47,7 +48,8 @@ verbalClockImages = {
 
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.png' )
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+    'favicon_alef.png' )
 
 @app.route('/hardware.html')
 @app.route('/hardware')
