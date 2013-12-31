@@ -1,2 +1,11 @@
+# Vim files
+*~
 *.swp
 *.swo
+*.swn
+
+# Windows crap
+Thumbs.db
+
+# OSX crap
+.DS_Store

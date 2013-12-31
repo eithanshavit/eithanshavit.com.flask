@@ -3,8 +3,9 @@ body {
 	background-color: #99CCFF;
 	background-color: #171D24;
    background-color: #FFFBED;
+   background-color: #C4C4C4;
+   background-color: #00B87D;
 	font-family: 'Text Me One', sans-serif;
-	font-family: 'Roboto', sans-serif;
 	margin:0;
 	padding:0;
 	height:100%;
@@ -26,7 +27,20 @@ body {
 	text-align: center;
 	font-size: 22px;
 	color: #3d3d3d;
+   color: #00B87D;
 	padding-bottom:40px;	/* Height of the footer */
+}
+#logo-container {
+	padding-bottom:40px;	/* Height of the footer */
+}
+#logo-container a{
+	font-size: 22px;
+   color: #00B87D;
+}
+
+#logo-container a:hover {
+	color: #3d3d3d;
+	color: #A3FF00;
 }
 
 #body {
@@ -83,9 +97,11 @@ li {
 
 li a {
 	color: #BE0E0E;
+	color: #CC5757;
 }
 li a:hover {
 	color: #7D068D;
+	color: #A3FF00;
 }
 
 .section{
@@ -95,6 +111,9 @@ li a:hover {
 #body p {
 	color: #606663;
 	color: #575757;
+	color: #ABFF4F;
+	color: #DCFF93;
+	color: #54FFC1;
 	font-size: 20px;
 }
 
@@ -111,24 +130,32 @@ li a:hover {
    color:rgb(99, 131, 70);
    color:rgba(107, 37, 93, 1);
    color:rgba(104, 26, 26, 1);
+	color: #0A0A0A;
+	color: #303C3A;
 	font-size: 24px;
 }
 
 #body h2 {
    color:rgb(186, 199, 191);
    color:rgb(99, 131, 70);
+	color: #0F717E;
 }
 
 #body a {
 	color: rgb(162, 102, 37);
+	color: #82FF62;
 	font-size: 20px;
 }
 
 a.chosen-menu {
 	color:rgb(77, 41, 41);
+	color: #E9004B;
+	color: #00FF7A;
 }
 
 #body a:hover {
 	color: #618132;
+	color: #FFB4A1;
+	color: #E9004B;
 	font-size: 20px;
 }
