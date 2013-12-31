@@ -1,6 +1,6 @@
 ﻿<html>
 <head>
-	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon_alef.png') }}">
    <link href='http://fonts.googleapis.com/css?family=Text+Me+One|Roboto' rel='stylesheet' type='text/css'>
    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" media="screen" />
    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='js/fancybox/source/jquery.fancybox.css') }}" media="screen" />
@@ -23,7 +23,7 @@
    <div id="header">
       <!-- Header start -->
       <div id="logo-container">
-      <a href="https://www.youtube.com/watch?v=8BdT5mFAk-Y">"Also, my rug was stolen."<br>-- The Dude.</a>
+		  <img class="logo" alt="" src="{{ url_for( 'static', filename='images/logo.png') }}"/>
       </div>
       <div class="menu">
       <ul>
