@@ -1,4 +1,4 @@
-[eithan.info](http://eithan.info)
+[eithanshavit.com](http://eithanshavit.com)
 =============
 
-My small website. Built with Python Flash and Jinja2.
+My modest website. Built with Python Flask and Jinja2.
