@@ -31,8 +31,7 @@ body {
 	padding-bottom:40px;	/* Height of the footer */
 }
 #logo-container {
-	padding-bottom:40px;
-	padding-top:30px;
+	padding-bottom:40px;	/* Height of the footer */
 }
 #logo-container a{
 	font-size: 22px;
@@ -68,10 +67,6 @@ img {
    position:relative;
    display:block;
    margin:auto;
-}
-
-.logo {
-	width:60px;
 }
 
 .logo-container img{
